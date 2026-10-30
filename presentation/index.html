@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Manager — презентація</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M4 4h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M20 8h0.5A1.5 1.5 0 0 1 22 9.5V15a1.5 1.5 0 0 1-1.5 1.5H20V20l-3.5-3.5H12"/></symbol>
+    <symbol id="i-exit" viewBox="0 0 24 24"><path d="M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></symbol>
+    <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12"/><path d="M7 3c0 5 10 5 10 9s-10 4-10 9"/><path d="M17 3c0 5-10 5-10 9s10 4 10 9"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5"/><path d="M6 7h12v4a6 6 0 0 1-12 0z"/><path d="M12 17v5"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 8 2.5 8h-17S6 15 6 9z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M6 16v-5M11 16V6M16 16v-8M21 16v-3"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.6-4.5L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.6 4.5L20 16"/><path d="M20 21v-5h-5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6-4.5-4.2 6.1-.8z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 14h3v3H8z"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="2.5"/><path d="M4 5.5v13c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-13"/><path d="M4 12c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="6.5" cy="9" r="1.8"/><circle cx="10" cy="5.5" r="1.8"/><circle cx="14" cy="5.5" r="1.8"/><circle cx="17.5" cy="9" r="1.8"/><path d="M12 11c-3 0-6 4-6 6.5C6 19.2 7.3 20 9 20c1.2 0 2-.6 3-.6s1.8.6 3 .6c1.7 0 3-.8 3-2.5C18 15 15 11 12 11z"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 5.5C10.5 4 8.5 3.5 7 4 4.5 5 4.5 8 5 10.5c.5 2.5 1 5 1.5 8 .3 1.5 2 1.7 2.5.2l1.2-4c.3-1 1.3-1 1.6 0l1.2 4c.5 1.5 2.2 1.3 2.5-.2.5-3 1-5.5 1.5-8 .5-2.5.5-5.5-2-6.5-1.5-.5-3.5 0-5 1.5z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 13l2.2-5.2A2 2 0 0 1 7 6.5h10a2 2 0 0 1 1.8 1.3L21 13v4H3z"/><path d="M3 13h18"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l-1.2 13H6.2z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7h.01"/></symbol>
+    <symbol id="i-tgo" viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/><path d="M9 13l8-6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 9.5c.3 2.4 2.1 4.2 4.5 4.5l1.2-1.2 2 1-.5 1.5c-3.8.3-8-3.9-7.7-7.7l1.5-.5 1 2z"/></symbol>
+    <symbol id="i-vb" viewBox="0 0 24 24"><path d="M12 3c5 0 8 2 8 7.5S17 18 12 18l-4 3v-3.4C5.6 16.7 4 14.4 4 10.5 4 5 7 3 12 3z"/><path d="M12 7.5a3 3 0 0 1 3 3"/></symbol>
+    <symbol id="i-ms" viewBox="0 0 24 24"><path d="M12 3C7 3 3 6.7 3 11.3c0 2.6 1.3 4.9 3.4 6.4V21l3.1-1.7c.8.2 1.6.3 2.5.3 5 0 9-3.7 9-8.3S17 3 12 3z"/><path d="M7.5 13.5l3-3.2 2.3 2 3.7-3.8-3 3.2-2.3-2z"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></symbol>
+    <symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.9 4.5L18.6 20.2c-.25 1.1-.9 1.4-1.8.9l-5.1-3.8-2.5 2.4c-.27.27-.5.5-1 .5l.37-5.2 9.5-8.6c.4-.37-.1-.57-.64-.2L5.99 13.07.96 11.5c-1.1-.34-1.1-1.1.23-1.6L20.5 2.4c.9-.34 1.7.2 1.4 2.1z"/></symbol>
+    <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#7F101C"/><stop offset="1" stop-color="#E32636"/></linearGradient>
+  </defs>
+</svg>
+
+<div class="rotate-hint">Для зручного перегляду поверніть телефон горизонтально</div>
+
+<div class="viewport" id="viewport">
+<div class="stage" id="stage" data-cur="0">
+
+  <!-- 01 HERO -->
+  <section class="slide s1 active in static" aria-label="Слайд 1">
+    <div class="glow" style="width:760px;height:760px;right:-120px;top:40px;background:radial-gradient(circle, rgba(193,18,43,.45) 0%, rgba(127,16,28,.15) 45%, transparent 70%);"></div>
+    <div class="glow" style="width:500px;height:500px;left:-260px;bottom:-280px;background:radial-gradient(circle, rgba(127,16,28,.35) 0%, transparent 70%);"></div>
+    <div class="left">
+      <div class="logo rv" style="--i:0"><span class="brandmark"></span>AI MANAGER</div>
+      <h1 class="rv" style="--i:1">Ваш бізнес працює. <span class="red">Навіть коли ви відпочиваєте.</span></h1>
+      <p class="lead rv" style="--i:2">AI-асистент, який спілкується з клієнтами, відповідає на запитання та допомагає автоматизувати запис 24/7.</p>
+      <div class="accent-pill rv" style="--i:3"><i></i>Автоматизація комунікацій для сучасного бізнесу</div>
+    </div>
+    <div class="scene rv" style="--i:2">
+      <div class="phone">
+        <div class="chat">
+          <div class="chat-head">
+            <div class="ava">AI</div>
+            <div><div class="chat-name">Ваш бізнес</div><div class="chat-status">онлайн · 24/7</div></div>
+            <div class="spacer"></div><div class="dots"><i></i><i></i><i></i></div>
+          </div>
+          <div class="chat-body">
+            <div class="day">Сьогодні</div>
+            <div class="m c">Добрий вечір! Ви ще приймаєте записи на завтра?<span class="t">23:14</span></div>
+            <div class="m a">Доброго вечора! Так, я на зв'язку 24/7. На яку послугу та який час вам зручно?<span class="t">23:14</span></div>
+            <div class="m c">Після 12:00, якщо можна<span class="t">23:15</span></div>
+            <div class="typing on"><i></i><i></i><i></i></div>
+          </div>
+          <div class="chat-input"><span>Повідомлення…</span><b><svg class="ico" style="width:18px;height:18px;fill:#fff;stroke:none"><use href="#i-send"/></svg></b></div>
+        </div>
+      </div>
+      <div class="float f1"><span class="ico-box"><svg class="ico"><use href="#i-clock"/></svg></span><div>Відповідь за ~30 секунд<small>Заявлена швидкість</small></div></div>
+      <div class="float f2"><span class="ico-box"><svg class="ico"><use href="#i-moon"/></svg></span><div>Працює 24/7<small>Вечори, ночі й вихідні</small></div></div>
+    </div>
+  </section>
+
+  <!-- 02 PROBLEM -->
+  <section class="slide s2" aria-label="Слайд 2">
+    <div class="glow" style="width:700px;height:700px;left:-300px;top:-300px;background:radial-gradient(circle, rgba(127,16,28,.35) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Проблема</div>
+    <h2 class="title rv" style="--i:1">Скільки клієнтів ви втрачаєте, <span class="red">поки не відповідаєте?</span></h2>
+    <div class="grid4">
+      <div class="card pcard rv" style="--i:2"><span class="ico-box"><svg class="ico"><use href="#i-moon"/></svg></span><h3>Пишуть у неробочий час</h3><p>Вечір, ніч і вихідні — саме тоді в багатьох клієнтів з'являється час написати.</p></div>
+      <div class="card pcard rv" style="--i:3"><span class="ico-box"><svg class="ico"><use href="#i-repeat"/></svg></span><h3>Однакові запитання щодня</h3><p>Менеджери годинами відповідають про ціни, графік і вільний час.</p></div>
+      <div class="card pcard rv" style="--i:4"><span class="ico-box"><svg class="ico"><use href="#i-exit"/></svg></span><h3>Клієнт іде до конкурента</h3><p>Не дочекавшись відповіді, людина пише тому, хто відповість першим.</p></div>
+      <div class="card pcard rv" style="--i:5"><span class="ico-box"><svg class="ico"><use href="#i-hourglass"/></svg></span><h3>Ручна обробка заявок</h3><p>Уточнення й записи забирають час, який власник міг би вкласти в розвиток.</p></div>
+    </div>
+    <div class="conclusion rv" style="--i:6"><span>Повільна відповідь може коштувати бізнесу <span class="red">нового клієнта.</span></span></div>
+  </section>
+
+  <!-- 03 SOLUTION -->
+  <section class="slide s3" aria-label="Слайд 3">
+    <div class="glow" style="width:620px;height:620px;left:490px;top:230px;background:radial-gradient(circle, rgba(193,18,43,.32) 0%, transparent 65%);"></div>
+    <svg class="net" viewBox="0 0 1600 900" aria-hidden="true">
+      <path d="M426 372 C560 372 600 470 700 500"/>
+      <path d="M426 502 C560 502 600 535 690 540"/>
+      <path d="M426 632 C560 632 600 590 700 580"/>
+      <path d="M1174 372 C1040 372 1000 470 900 500"/>
+      <path d="M1174 502 C1040 502 1000 535 910 540"/>
+      <path d="M1174 632 C1040 632 1000 590 900 580"/>
+      <path d="M800 650 L800 718"/>
+    </svg>
+    <div class="top">
+      <div>
+        <div class="kicker rv" style="--i:0">Рішення</div>
+        <h2 class="title rv" style="--i:1;font-size:58px">AI MANAGER — <span class="red">ваш цифровий менеджер 24/7</span></h2>
+      </div>
+      <p class="lead rv" style="--i:2">AI-асистент автоматично спілкується з клієнтами в месенджерах, розуміє контекст розмови та розповідає про послуги вашого бізнесу.</p>
+    </div>
+    <div class="core rv" style="--i:3"><div><b>AI<br>MANAGER</b><small>працює 24/7</small></div></div>
+    <div class="card cap rv" style="--i:4;left:96px;top:330px"><span class="ico-box"><svg class="ico"><use href="#i-chat"/></svg></span><span>Відповідає на запитання</span></div>
+    <div class="card cap rv" style="--i:5;left:96px;top:460px"><span class="ico-box"><svg class="ico"><use href="#i-tag"/></svg></span><span>Консультує щодо послуг і цін</span></div>
+    <div class="card cap rv" style="--i:6;left:96px;top:590px"><span class="ico-box"><svg class="ico"><use href="#i-spark"/></svg></span><span>Розуміє контекст переписки</span></div>
+    <div class="card cap rv" style="--i:4;left:1174px;top:330px"><span class="ico-box"><svg class="ico"><use href="#i-clock"/></svg></span><span>Працює цілодобово</span></div>
+    <div class="card cap rv" style="--i:5;left:1174px;top:460px"><span class="ico-box"><svg class="ico"><use href="#i-image"/></svg></span><span>Розпізнає фотографії</span></div>
+    <div class="card cap rv" style="--i:6;left:1174px;top:590px"><span class="ico-box"><svg class="ico"><use href="#i-user"/></svg></span><span>За потреби передає діалог менеджеру</span></div>
+    <div class="card cap wide rv" style="--i:7;left:540px;top:718px"><span class="ico-box"><svg class="ico"><use href="#i-plug"/></svg></span><span>Інтеграція з CRM і системою запису<small>У тарифах БІЗНЕС і ПРО, якщо ваша система це дозволяє</small></span></div>
+  </section>
+
+  <!-- 04 BENEFITS -->
+  <section class="slide s4" aria-label="Слайд 4">
+    <div class="glow" style="width:600px;height:600px;left:-200px;bottom:-200px;background:radial-gradient(circle, rgba(127,16,28,.4) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Переваги</div>
+    <h2 class="title rv" style="--i:1">Менше рутини. <span class="red">Більше можливостей для бізнесу.</span></h2>
+    <div class="bgrid">
+      <div class="card bcard big rv" style="--i:2"><div class="num">24/7</div><div class="lbl">Завжди на зв'язку</div><p>AI-асистент відповідає клієнтам навіть у неробочий час — вночі, у вихідні та свята.</p></div>
+      <div class="card bcard rv" style="--i:3"><div class="num red">30 сек</div><div class="lbl">Швидкість відповіді</div><p>Заявлена на сайті швидкість відповіді на повідомлення клієнта.</p></div>
+      <div class="card bcard rv" style="--i:4"><div class="num">до 4 год</div><div class="lbl">Економія часу</div><p>Потенційна економія часу на переписках протягом робочого дня.</p></div>
+      <div class="card bcard rv" style="--i:5"><div class="row"><div class="num mid">24 + 2 год</div><span class="tag">Бізнес · Про</span></div><div class="lbl">Нагадування про візит</div><p>У тарифах із системою запису бот нагадує клієнту за 24 і за 2 години до візиту.</p></div>
+      <div class="card bcard rv" style="--i:6"><div class="row"><div class="num mid red">+15%</div><span class="tag">Про</span></div><div class="lbl">Додаткові продажі</div><p>Сценарії пропозиції супутніх послуг. На сайті заявлено +15% до середнього чека.</p></div>
+    </div>
+    <p class="note footer-note rv" style="--i:7">Показники та можливості наведені відповідно до інформації на сайті AI MANAGER. Фактичні результати залежать від бізнесу та налаштувань.</p>
+  </section>
+
+  <!-- 05 PROCESS -->
+  <section class="slide s5" aria-label="Слайд 5">
+    <div class="glow" style="width:900px;height:500px;left:350px;top:330px;background:radial-gradient(ellipse, rgba(127,16,28,.3) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Як це працює</div>
+    <h2 class="title rv" style="--i:1">Від першого повідомлення <span class="red">до результату</span></h2>
+    <div class="steps">
+      <div class="track"><span></span></div>
+      <div class="step rv" style="--i:2"><div class="dot">01</div><h3>Клієнт пише в месенджер</h3><p>Instagram, Telegram або інший підключений канал.</p></div>
+      <div class="step rv" style="--i:3"><div class="dot">02</div><h3>AI аналізує запит</h3><p>Розуміє, що потрібно клієнту, з урахуванням контексту розмови.</p></div>
+      <div class="step rv" style="--i:4"><div class="dot">03</div><h3>Відповідає або уточнює</h3><p>Надає інформацію про послуги чи ставить уточнюючі запитання.</p></div>
+      <div class="step rv" style="--i:5"><div class="dot">04</div><h3>Допомагає оформити заявку</h3><p>Збирає потрібні дані для заявки чи запису.</p></div>
+      <div class="step rv" style="--i:6"><div class="dot">05</div><h3>Створює запис і нагадування</h3><p>Записує клієнта в систему і планує нагадування.</p><span class="tag">Потрібна інтеграція · Бізнес і Про</span></div>
+    </div>
+    <p class="note footer-note rv" style="--i:7">Автоматичне створення запису доступне лише за наявності відповідної інтеграції та в тарифах, які її передбачають.</p>
+  </section>
+
+  <!-- 06 NICHES -->
+  <section class="slide s6" aria-label="Слайд 6">
+    <div class="glow" style="width:700px;height:700px;right:-300px;top:-250px;background:radial-gradient(circle, rgba(127,16,28,.35) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Для кого</div>
+    <h2 class="title rv" style="--i:1">AI-асистент адаптується <span class="red">під ваш бізнес</span></h2>
+    <div class="grid6">
+      <div class="card ncard rv" style="--i:2"><span class="ico-box"><svg class="ico"><use href="#i-scissors"/></svg></span><div><h3>Б'юті-салони</h3><p>Консультації щодо послуг і допомога із записом.</p></div></div>
+      <div class="card ncard rv" style="--i:3"><span class="ico-box"><svg class="ico"><use href="#i-paw"/></svg></span><div><h3>Грумінг-салони</h3><p>Уточнення породи, послуги та бажаного часу.</p></div></div>
+      <div class="card ncard rv" style="--i:4"><span class="ico-box"><svg class="ico"><use href="#i-tooth"/></svg></span><div><h3>Стоматології</h3><p>Відповіді на типові запитання та приймання заявок.</p></div></div>
+      <div class="card ncard rv" style="--i:5"><span class="ico-box"><svg class="ico"><use href="#i-wrench"/></svg></span><div><h3>Сервісні центри</h3><p>Первинна консультація та збір деталей звернення.</p></div></div>
+      <div class="card ncard rv" style="--i:6"><span class="ico-box"><svg class="ico"><use href="#i-car"/></svg></span><div><h3>СТО</h3><p>Уточнення проблеми та передача інформації менеджеру.</p></div></div>
+      <div class="card ncard rv" style="--i:7"><span class="ico-box"><svg class="ico"><use href="#i-bag"/></svg></span><div><h3>Магазини</h3><p>Відповіді щодо товарів, цін та наявної інформації.</p></div></div>
+    </div>
+    <p class="note footer-note rv" style="--i:8">Наведено приклади можливого застосування, а не реалізовані проєкти.</p>
+  </section>
+
+  <!-- 07 INTEGRATIONS -->
+  <section class="slide s7" aria-label="Слайд 7">
+    <div class="glow" style="width:620px;height:420px;left:600px;top:200px;background:radial-gradient(ellipse, rgba(193,18,43,.28) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Можливості та інтеграції</div>
+    <h2 class="title rv" style="--i:1;font-size:58px">Не просто чат-бот. <span class="red">Частина вашого бізнесу.</span></h2>
+    <div class="flow rv" style="--i:2">
+      <div class="fnode"><div class="person"><svg class="ico"><use href="#i-user"/></svg></div><div class="lbl">Клієнт</div></div>
+      <div class="arrow"></div>
+      <div class="fnode card"><div class="msgr">
+        <span title="Instagram"><svg class="ico"><use href="#i-ig"/></svg></span>
+        <span title="Telegram"><svg class="ico"><use href="#i-tgo"/></svg></span>
+        <span title="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></span>
+        <span title="Viber"><svg class="ico"><use href="#i-vb"/></svg></span>
+        <span title="Messenger"><svg class="ico"><use href="#i-ms"/></svg></span>
+      </div><div class="lbl">Месенджер</div><div class="sub">Канали залежать від тарифу</div></div>
+      <div class="arrow"></div>
+      <div class="aicore"><b>AI<br>MANAGER</b></div>
+      <div class="arrow"></div>
+      <div class="outs">
+        <div class="card out"><span class="ico-box"><svg class="ico"><use href="#i-database"/></svg></span><div><b>CRM</b><small>Ліди й заявки</small></div></div>
+        <div class="card out"><span class="ico-box"><svg class="ico"><use href="#i-calendar"/></svg></span><div><b>Система запису</b><small>Вільні слоти та записи</small></div></div>
+        <div class="card out"><span class="ico-box"><svg class="ico"><use href="#i-user"/></svg></span><div><b>Менеджер</b><small>Складні звернення</small></div></div>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="card fi rv" style="--i:3"><svg class="ico"><use href="#i-database"/></svg><span>Інтеграція з CRM</span><span class="tag">Бізнес · Про</span></div>
+      <div class="card fi rv" style="--i:3"><svg class="ico"><use href="#i-calendar"/></svg><span>Інтеграція з системою запису</span><span class="tag">Бізнес · Про</span></div>
+      <div class="card fi rv" style="--i:3"><svg class="ico"><use href="#i-bell"/></svg><span>Автоматичні нагадування</span><span class="tag">Бізнес · Про</span></div>
+      <div class="card fi rv" style="--i:4"><svg class="ico"><use href="#i-chart"/></svg><span>Дашборд аналітики</span><span class="tag">Бізнес · Про</span></div>
+      <div class="card fi rv" style="--i:4"><svg class="ico"><use href="#i-table"/></svg><span>Таблиця лідів</span><span class="tag">Бізнес · Про</span></div>
+      <div class="card fi rv" style="--i:4"><svg class="ico"><use href="#i-mic"/></svg><span>Розпізнавання голосових</span><span class="tag">Бізнес · Про</span></div>
+      <div class="card fi rv" style="--i:5"><svg class="ico"><use href="#i-user"/></svg><span>Передача звернень менеджеру</span><span class="tag grey">Усі тарифи</span></div>
+      <div class="card fi rv" style="--i:5"><svg class="ico"><use href="#i-refresh"/></svg><span>Реактивація клієнтів</span><span class="tag">Про</span></div>
+      <div class="card fi rv" style="--i:5"><svg class="ico"><use href="#i-star"/></svg><span>Збір відгуків Google Maps</span><span class="tag">Про</span></div>
+    </div>
+    <p class="note footer-note rv" style="--i:6">Можливість інтеграції залежить від технічних можливостей вашої системи. Набір функцій залежить від обраного тарифу.</p>
+  </section>
+
+  <!-- 08 PRICING -->
+  <section class="slide s8" aria-label="Слайд 8">
+    <div class="glow" style="width:700px;height:600px;left:450px;top:180px;background:radial-gradient(ellipse, rgba(193,18,43,.3) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Тарифи</div>
+    <h2 class="title rv" style="--i:1;font-size:56px;max-width:none">Рішення для різних <span class="red">масштабів бізнесу</span></h2>
+    <div class="tiers">
+      <div class="card tier rv" style="--i:2">
+        <div class="tname">СТАРТ</div>
+        <div class="tprice"><b>$149</b><span>/ міс</span></div>
+        <ul class="tlist">
+          <li>Instagram або Telegram на вибір</li>
+          <li>AI-діалог 24/7</li>
+          <li>Розуміння контексту</li>
+          <li>Розпізнавання фото</li>
+          <li>Передача менеджеру</li>
+          <li>Базова статистика</li>
+          <li>4 правки на місяць</li>
+        </ul>
+      </div>
+      <div class="card tier hot rv" style="--i:3">
+        <span class="badge">НАЙПОПУЛЯРНІШИЙ</span>
+        <div class="tname">БІЗНЕС</div>
+        <div class="tprice"><b>$249</b><span>/ міс</span></div>
+        <ul class="tlist">
+          <li class="inc">Усе з тарифу СТАРТ, а також:</li>
+          <li>Instagram + Telegram</li>
+          <li>Розпізнавання голосових</li>
+          <li>Інтеграція із системою запису</li>
+          <li>CRM-інтеграція і таблиця лідів</li>
+          <li>Дашборд аналітики і щомісячний звіт</li>
+          <li>Автоматичні нагадування</li>
+          <li>6 правок на місяць</li>
+        </ul>
+      </div>
+      <div class="card tier rv" style="--i:4">
+        <div class="tname">ПРО</div>
+        <div class="tprice"><b>$349</b><span>/ міс</span></div>
+        <ul class="tlist">
+          <li class="inc">Усе з тарифу БІЗНЕС, а також:</li>
+          <li>Instagram, Telegram, WhatsApp, Viber, Messenger</li>
+          <li>Збір відгуків Google Maps</li>
+          <li>Реактивація клієнтів</li>
+          <li>Апсейл-сценарії</li>
+          <li>Пріоритетна підтримка</li>
+          <li>10 правок на місяць</li>
+        </ul>
+      </div>
+    </div>
+    <div class="under rv" style="--i:5"><b><span class="red">7 днів</span> безкоштовного тестування. Без оплати впровадження.</b></div>
+    <p class="note rv" style="--i:6;margin-top:10px">Сторонні сервіси, зокрема ManyChat, EasyWeek і CRM, за потреби оплачуються окремо.</p>
+  </section>
+
+  <!-- 09 START -->
+  <section class="slide s9" aria-label="Слайд 9">
+    <div class="glow" style="width:700px;height:700px;right:-250px;bottom:-350px;background:radial-gradient(circle, rgba(193,18,43,.35) 0%, transparent 70%);"></div>
+    <div class="kicker rv" style="--i:0">Початок співпраці</div>
+    <h2 class="title rv" style="--i:1">Запустити AI-асистента <span class="red">простіше, ніж здається</span></h2>
+    <div class="tl">
+      <div class="card tcard rv" style="--i:2"><span class="bar"></span><div class="n">01</div><h3>Знайомство</h3><p>Обговорюємо ваш бізнес, потреби та завдання.</p></div>
+      <div class="card tcard rv" style="--i:3"><span class="bar"></span><div class="n">02</div><h3>Збір інформації</h3><p>Отримуємо дані про послуги, ціни, графік і типові запитання клієнтів.</p></div>
+      <div class="card tcard rv" style="--i:4"><span class="bar"></span><div class="n">03</div><h3>Налаштування</h3><p>Створюємо та адаптуємо AI-асистента під ваш бізнес.</p></div>
+      <div class="card tcard rv" style="--i:5"><span class="bar"></span><div class="n">04</div><h3>Тестування</h3><p>Після підготовки бота ви отримуєте 7 днів безкоштовного тестового періоду.</p></div>
+    </div>
+    <p class="note footer-note rv" style="--i:6">Тривалість налаштування залежить від складності проєкту.</p>
+  </section>
+
+  <!-- 10 EXAMPLE 1 -->
+  <section class="slide s10" aria-label="Слайд 10">
+    <div class="glow" style="width:820px;height:820px;right:-140px;top:40px;background:radial-gradient(circle, rgba(193,18,43,.32) 0%, transparent 65%);"></div>
+    <div class="ex">
+      <div class="side">
+        <div class="kicker rv" style="--i:0">Приклад №1 · Грумінг-салон</div>
+        <h2 class="title rv" style="--i:1">Як AI-асистент допомагає <span class="red">записати клієнта</span></h2>
+        <p class="lead rv" style="--i:2">Демонстраційний сценарій з офіційного сайту AI MANAGER: від першого повідомлення до запису з нагадуванням.</p>
+        <div class="meta rv" style="--i:3">
+          <div><i></i>Уточнює бажаний час</div>
+          <div><i></i>Пропонує вільні слоти</div>
+          <div><i></i>Підтверджує запис і планує нагадування</div>
+        </div>
+        <div class="disclaimer rv" style="--i:4">Демонстрація сценарію автоматичного запису за наявності відповідної інтеграції</div>
+        <div class="rv" style="--i:5"><button class="replay" type="button" data-replay="chat1"><svg class="ico"><use href="#i-replay"/></svg>Повторити діалог</button></div>
+      </div>
+      <div class="chat play rv" id="chat1" style="--i:2">
+        <div class="chat-head">
+          <div class="ava">Х</div>
+          <div><div class="chat-name">Салон «Хвостик»</div><div class="chat-status">онлайн</div></div>
+          <div class="spacer"></div><div class="dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="chat-body">
+          <div class="day">Сьогодні</div>
+          <div class="m c">Привіт! Хочу записати йорка на стрижку<span class="t">18:41</span></div>
+          <div class="m a">Доброго дня! На коли вам зручно?<span class="t">18:41</span></div>
+          <div class="m c">П'ятниця після 14:00<span class="t">18:42</span></div>
+          <div class="m a">Вільно: 14:30, 15:00, 17:30. Який слот?<span class="t">18:42</span></div>
+          <div class="m c">15:00<span class="t">18:43</span></div>
+          <div class="m a">Записав на п'ятницю, 15:00. Нагадаю за день і за 2 години ✅<span class="t">18:43</span></div>
+          <div class="typing"><i></i><i></i><i></i></div>
+        </div>
+        <div class="chat-input"><span>Повідомлення…</span><b><svg class="ico" style="width:18px;height:18px;fill:#fff;stroke:none"><use href="#i-send"/></svg></b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 EXAMPLE 2 -->
+  <section class="slide s11" aria-label="Слайд 11">
+    <div class="glow" style="width:820px;height:820px;left:-160px;top:40px;background:radial-gradient(circle, rgba(193,18,43,.3) 0%, transparent 65%);"></div>
+    <div class="ex flip">
+      <div class="chat play rv" id="chat2" style="--i:2">
+        <div class="chat-head">
+          <div class="ava">Б</div>
+          <div><div class="chat-name">Ваш б'юті-салон</div><div class="chat-status">онлайн</div></div>
+          <div class="spacer"></div><div class="dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="chat-body">
+          <div class="day">Сьогодні</div>
+          <div class="m c">Добрий день! Підкажіть, які у вас є послуги для догляду за волоссям?<span class="t">11:05</span></div>
+          <div class="m a">Добрий день! Допоможу підібрати послугу. Вас цікавить відновлення волосся, догляд чи укладка?<span class="t">11:05</span></div>
+          <div class="m c">Хочу відновлення волосся<span class="t">11:06</span></div>
+          <div class="m a">Зрозуміло! Щоб порадити відповідну послугу, уточніть, будь ласка, що вас найбільше турбує: сухість, ламкість чи пошкодження після фарбування?<span class="t">11:06</span></div>
+          <div class="m c">Сухість і ламкість<span class="t">11:07</span></div>
+          <div class="m a">Дякую! Я можу передати ваш запит майстру, щоб він допоміг підібрати відповідний догляд. Бажаєте залишити заявку?<span class="t">11:07</span></div>
+          <div class="typing"><i></i><i></i><i></i></div>
+        </div>
+        <div class="chat-input"><span>Повідомлення…</span><b><svg class="ico" style="width:18px;height:18px;fill:#fff;stroke:none"><use href="#i-send"/></svg></b></div>
+      </div>
+      <div class="side">
+        <div class="kicker rv" style="--i:0">Приклад №2 · Б'юті-салон</div>
+        <h2 class="title rv" style="--i:1">Консультація, яка <span class="red">веде до заявки</span></h2>
+        <p class="lead rv" style="--i:2">AI-асистент з'ясовує потребу клієнта, ставить уточнюючі запитання й передає готовий запит майстру.</p>
+        <div class="meta rv" style="--i:3">
+          <div><i></i>Допомагає зорієнтуватися в послугах</div>
+          <div><i></i>Уточнює деталі без зайвих запитань</div>
+          <div><i></i>Передає заявку майстру</div>
+        </div>
+        <div class="disclaimer rv" style="--i:4">Приклад можливого діалогу</div>
+        <div class="rv" style="--i:5"><button class="replay" type="button" data-replay="chat2"><svg class="ico"><use href="#i-replay"/></svg>Повторити діалог</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 CTA -->
+  <section class="slide s12" aria-label="Слайд 12">
+    <div class="glow" style="width:1300px;height:900px;left:150px;top:-260px;background:radial-gradient(ellipse, rgba(193,18,43,.42) 0%, rgba(127,16,28,.18) 40%, transparent 70%);"></div>
+    <div class="logo rv" style="--i:0"><span class="brandmark"></span>AI MANAGER</div>
+    <h2 class="rv" style="--i:1">Ваші клієнти вже пишуть. <span class="red">Хто їм відповідає?</span></h2>
+    <p class="lead rv" style="--i:2">Довірте рутинні переписки AI-асистенту та приділяйте більше часу розвитку бізнесу.</p>
+    <div class="free rv" style="--i:3">7 ДНІВ БЕЗКОШТОВНО</div>
+    <div class="free-sub rv" style="--i:3">Спробуйте AI MANAGER у своєму бізнесі без оплати впровадження.</div>
+    <a class="cta-btn rv" style="--i:4" href="https://t.me/destorsssss" target="_blank" rel="noopener"><svg class="ico"><use href="#i-send"/></svg>СПРОБУВАТИ 7 ДНІВ БЕЗКОШТОВНО</a>
+    <div class="contacts">
+      <a class="card contact rv" style="--i:5" href="https://t.me/destorsssss" target="_blank" rel="noopener">
+        <span class="ico-box"><svg class="ico"><use href="#i-send"/></svg></span>
+        <div><div class="role">Засновник — автоматизація</div><div class="handle">@destorsssss</div><div class="what">Налаштування бота, інтеграції, технічні питання</div></div>
+      </a>
+      <a class="card contact rv" style="--i:6" href="https://t.me/Malintosfx" target="_blank" rel="noopener">
+        <span class="ico-box"><svg class="ico"><use href="#i-send"/></svg></span>
+        <div><div class="role">Співзасновник — керівник з продажів</div><div class="handle">@Malintosfx</div><div class="what">Підбір тарифу, умови співпраці, супровід під час тестового періоду</div></div>
+      </a>
+    </div>
+  </section>
+
+  <div class="hud-brand"><i></i>AI MANAGER</div>
+  <div class="hud">
+    <div class="counter" id="counter"><b>01</b> / 12</div>
+    <button class="hbtn" id="prev" type="button" aria-label="Попередній слайд"><svg class="ico"><use href="#i-left"/></svg></button>
+    <button class="hbtn" id="next" type="button" aria-label="Наступний слайд"><svg class="ico"><use href="#i-right"/></svg></button>
+    <button class="hbtn" id="fs" type="button" aria-label="Повноекранний режим"><svg class="ico"><use href="#i-full"/></svg></button>
+  </div>
+  <div class="progress"><span id="bar"></span></div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
